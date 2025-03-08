@@ -14,6 +14,29 @@
   --primary: #1f4b43;
 }
 
-body {
-  @apply bg-background text-foreground;
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .wrapper {
+    @apply w-full max-w-screen-2xl px-4 2xl:px-0;
+  }
+}
+
+@theme {
+  --animate-fade: fade 0.7s ease-out forwards;
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
