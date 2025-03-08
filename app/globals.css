@@ -6,12 +6,14 @@
   --font-sans: var(--font-roboto-sans);
   --font-mono: var(--font-roboto-mono);
   --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
 }
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
   --primary: #1f4b43;
+  --secondary: #e7c873;
 }
 
 @layer base {

@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils"
+import SearchInput from "./search-input"
 
 export function Hero() {
   return (
@@ -21,6 +22,8 @@ export function Hero() {
         <p className="text-xs">
           Search properties for sale and to rent in the UK
         </p>
+
+        <SearchInput />
       </div>
     </section>
   )

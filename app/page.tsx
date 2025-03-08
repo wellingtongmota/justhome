@@ -1,8 +1,8 @@
-import { Hero } from "@/components/hero"
+import { Hero } from "@/components/hero/hero"
 
 export default function Home() {
   return (
-    <div className="text-primary flex flex-col items-center text-3xl font-bold">
+    <div>
       <Hero />
     </div>
   )
