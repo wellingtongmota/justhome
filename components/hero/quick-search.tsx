@@ -18,7 +18,7 @@ export function QuickSearch({ className, icon, children }: QuickSearchProps) {
       <div className="grid size-10 place-content-center rounded-full bg-white p-2">
         {icon}
       </div>
-      <div className="text-sm text-white">{children}</div>
+      <div className="text-xs text-white sm:text-sm">{children}</div>
     </div>
   )
 }
