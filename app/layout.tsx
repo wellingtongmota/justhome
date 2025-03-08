@@ -1,3 +1,4 @@
+import { Navbar } from "@/components/navbar"
 import { roboto } from "@/fonts"
 import { cn } from "@/lib/utils"
 import type { Metadata } from "next"
@@ -21,6 +22,7 @@ export default function RootLayout({
           roboto.className
         ])}
       >
+        <Navbar />
         {children}
       </body>
     </html>
