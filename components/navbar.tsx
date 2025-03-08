@@ -1,11 +1,14 @@
+import { LogoIcon } from "@/components/icons/logo-icon"
+import { SidebarSheet } from "@/components/sidebar-sheet"
+import { Button } from "@/components/ui/button"
 import { TLink } from "@/types"
-import { LogoIcon } from "./icons/logo-icon"
+import { Menu } from "lucide-react"
 import Link from "next/link"
 
 const links: TLink[] = [
   {
     title: "Home",
-    url: "/#"
+    url: "/"
   },
   {
     title: "Listings",
@@ -34,7 +37,9 @@ export function Navbar() {
     <header className="absolute top-4 z-10 mx-auto flex w-full px-4 xl:px-0">
       <div className="mx-auto flex h-14 w-full max-w-screen-xl items-center rounded-full bg-white px-4">
         <div className="basis-1/3">
-          <LogoIcon size="32" />
+          <Link href="/">
+            <LogoIcon size="32" />
+          </Link>
         </div>
 
         <div className="hidden basis-1/3 items-center lg:flex">
@@ -48,7 +53,13 @@ export function Navbar() {
         </div>
         <div className="hidden basis-1/3 justify-end lg:flex">User</div>
 
-        <div className="ml-auto block lg:hidden">Menu</div>
+        <div className="ml-auto block lg:hidden">
+          <SidebarSheet links={links}>
+            <Button variant="ghost" size="icon">
+              <Menu className="size-6" />
+            </Button>
+          </SidebarSheet>
+        </div>
       </div>
     </header>
   )
