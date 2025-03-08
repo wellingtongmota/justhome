@@ -1,4 +1,5 @@
 import { LogoIcon } from "@/components/icons/logo-icon"
+import { NavUser } from "@/components/nav-user"
 import { SidebarSheet } from "@/components/sidebar-sheet"
 import { Button } from "@/components/ui/button"
 import { TLink } from "@/types"
@@ -42,7 +43,7 @@ export function Navbar() {
           </Link>
         </div>
 
-        <div className="hidden basis-1/3 items-center lg:flex">
+        <div className="hidden basis-1/3 items-center md:flex">
           <nav className="flex gap-8">
             {links.map((link) => (
               <Link key={link.title} href={link.url} className="font-medium">
@@ -51,9 +52,10 @@ export function Navbar() {
             ))}
           </nav>
         </div>
-        <div className="hidden basis-1/3 justify-end lg:flex">User</div>
 
-        <div className="ml-auto block lg:hidden">
+        <NavUser className="hidden basis-1/3 justify-end gap-4 xl:flex" />
+
+        <div className="ml-auto flex basis-1/3 justify-end xl:hidden">
           <SidebarSheet links={links}>
             <Button variant="ghost" size="icon">
               <Menu className="size-6" />
