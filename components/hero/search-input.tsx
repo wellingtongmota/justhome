@@ -5,11 +5,11 @@ type SearchInputProps = {
   className?: string
 }
 
-export default function SearchInput({ className }: SearchInputProps) {
+export function SearchInput({ className }: SearchInputProps) {
   return (
     <div
       className={cn([
-        "focus-within:ring-secondary flex w-full max-w-lg gap-2 overflow-hidden rounded-full bg-white p-1 text-black focus-within:ring-1",
+        "focus-within:ring-secondary flex w-full max-w-lg gap-2 overflow-hidden rounded-full bg-white p-1 focus-within:ring-1",
         className
       ])}
     >
