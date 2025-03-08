@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn([
-          "bg-background grid min-h-dvh antialiased",
+          "bg-background text-foreground grid min-h-dvh antialiased",
           roboto.className
         ])}
       >

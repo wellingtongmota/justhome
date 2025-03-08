@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils"
-import { PiMagnifyingGlassLight } from "react-icons/pi"
+import { Search } from "lucide-react"
 
 type SearchInputProps = {
   className?: string
@@ -19,7 +19,7 @@ export function SearchInput({ className }: SearchInputProps) {
         className="flex-1 px-4 focus:outline-hidden"
       />
       <button className="bg-secondary hover:bg-secondary/90 grid size-9 cursor-pointer place-content-center rounded-full">
-        <PiMagnifyingGlassLight />
+        <Search className="size-4" />
       </button>
     </div>
   )
