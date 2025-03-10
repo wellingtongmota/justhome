@@ -15,3 +15,9 @@ export type TPropertie = {
   bathrooms: number
   area: number
 }
+
+export type TCity = {
+  img: string
+  name: string
+  properties: string
+}
