@@ -29,7 +29,7 @@ const reasons: TReason[] = [
 
 export function WorkWithUs() {
   return (
-    <div className="wrapper mx-auto flex flex-col items-center gap-6 pt-8 text-center sm:gap-8 md:pt-16">
+    <div className="wrapper mx-auto flex flex-col items-center gap-6 pt-8 text-center sm:gap-10 md:pt-16">
       <div>
         <h2 className="text-2xl font-medium sm:text-4xl">
           Why You Should Work With Us

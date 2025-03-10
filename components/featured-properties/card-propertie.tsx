@@ -11,7 +11,7 @@ export function CardPropertie({ propertie }: CardPropertieProps) {
   const { img, name, tags, address, area, bathrooms, rooms, value } = propertie
   return (
     <div
-      className="animate-fade flex aspect-square w-full max-w-md flex-col justify-center overflow-hidden rounded-md border bg-cover bg-center p-2 opacity-0"
+      className="animate-fade flex aspect-square w-full max-w-md flex-col justify-center overflow-hidden rounded-md border bg-cover bg-center p-2 opacity-0 transition duration-75 ease-in-out hover:cursor-pointer hover:shadow-lg"
       style={{ backgroundImage: `url(${img})` }}
     >
       <div className="flex gap-2">

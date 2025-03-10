@@ -1,5 +1,10 @@
+"use client"
+
 import { CardPropertie } from "@/components/featured-properties/card-propertie"
-import { TPropertie } from "@/types"
+import { TPropertie, TTag } from "@/types"
+import { useState } from "react"
+import { FilterButton } from "./filter-button"
+import { MoveRight } from "lucide-react"
 
 const properties: TPropertie[] = [
   {
@@ -64,15 +69,56 @@ const properties: TPropertie[] = [
   }
 ]
 
-// NOTE: remover pb em section
 export function FeaturedProperties() {
+  const [filter, setFilter] = useState<TTag | "ALL">("ALL")
+
+  const filteredProperties = properties.filter((property) => {
+    if (filter === "ALL") return true
+    return property?.tags?.includes(filter)
+  })
+
   return (
-    <section className="wrapper mx-auto flex flex-col items-center gap-4 pt-8 pb-8 sm:gap-6 md:pt-16">
+    <section className="wrapper mx-auto flex flex-col items-center gap-6 pt-8 pb-8 sm:gap-10 md:pt-16">
+      <div className="text-center">
+        <h2 className="text-2xl font-medium sm:text-4xl">
+          Featured Properties
+        </h2>
+        <p className="text-sm sm:text-base">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+
+      <div className="flex gap-4">
+        <FilterButton
+          filter={filter === "ALL"}
+          onClick={() => setFilter("ALL")}
+        >
+          All Properties
+        </FilterButton>
+        <FilterButton
+          filter={filter === "FOR SALE"}
+          onClick={() => setFilter("FOR SALE")}
+        >
+          For Sale
+        </FilterButton>
+        <FilterButton
+          filter={filter === "FOR RENT"}
+          onClick={() => setFilter("FOR RENT")}
+        >
+          For Rent
+        </FilterButton>
+      </div>
+
       <div className="grid w-full justify-items-center gap-4 sm:grid-cols-2 md:gap-8 lg:grid-cols-3">
-        {properties.map((propertie) => (
-          <CardPropertie key={propertie.name} propertie={propertie} />
+        {filteredProperties.map((property) => (
+          <CardPropertie key={property.name} propertie={property} />
         ))}
       </div>
+
+      <button className="bg-secondary hover:bg-secondary/90 inline-flex cursor-pointer items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-medium sm:text-base">
+        See All Listing
+        <MoveRight className="size-4" />
+      </button>
     </section>
   )
 }
