@@ -1,9 +1,8 @@
 "use client"
 
-import { ChevronLeft, ChevronRight, Star } from "lucide-react"
 import "keen-slider/keen-slider.min.css"
 import { useKeenSlider } from "keen-slider/react.es"
-import { useState } from "react"
+import { ChevronLeft, ChevronRight, Star } from "lucide-react"
 import { QuoteIcon } from "../icons"
 
 type TTestimonial = {
