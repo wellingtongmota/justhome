@@ -87,15 +87,19 @@ export function Testimonials() {
               <div key={index} className="keen-slider__slide">
                 <div className="flex justify-between">
                   <div>
-                    <h5 className="text-lg font-medium">
+                    <h5 className="text-lg font-medium xl:text-2xl">
                       {testimonial.clientName}
                     </h5>
-                    <p className="text-sm">{testimonial.profession}</p>
+                    <p className="text-sm xl:text-base">
+                      {testimonial.profession}
+                    </p>
                   </div>
 
                   <QuoteIcon />
                 </div>
-                <p className="mt-6">{testimonial.testimonial}</p>
+                <p className="mt-6 text-base xl:text-lg">
+                  {testimonial.testimonial}
+                </p>
               </div>
             ))}
           </div>

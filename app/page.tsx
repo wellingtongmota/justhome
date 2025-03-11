@@ -1,3 +1,4 @@
+import { BestProperties } from "@/components/best-properties"
 import { CitiesProperties } from "@/components/cities-properties"
 import { FeaturedProperties } from "@/components/featured-properties"
 import { Hero } from "@/components/hero/hero"
@@ -14,6 +15,7 @@ export default function Home() {
       <CitiesProperties />
       <HowWorks />
       <Testimonials />
+      <BestProperties />
     </div>
   )
 }
