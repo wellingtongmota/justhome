@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight, Star } from "lucide-react"
 import "keen-slider/keen-slider.min.css"
 import { useKeenSlider } from "keen-slider/react.es"
 import { useState } from "react"
+import { QuoteIcon } from "../icons"
 
 type TTestimonial = {
   clientName: string
@@ -84,11 +85,15 @@ export function Testimonials() {
           <div ref={sliderRef} className="keen-slider">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="keen-slider__slide">
-                <div>
-                  <h5 className="text-lg font-medium">
-                    {testimonial.clientName}
-                  </h5>
-                  <p className="text-sm">{testimonial.profession}</p>
+                <div className="flex justify-between">
+                  <div>
+                    <h5 className="text-lg font-medium">
+                      {testimonial.clientName}
+                    </h5>
+                    <p className="text-sm">{testimonial.profession}</p>
+                  </div>
+
+                  <QuoteIcon />
                 </div>
                 <p className="mt-6">{testimonial.testimonial}</p>
               </div>
