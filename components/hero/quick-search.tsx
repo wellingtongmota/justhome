@@ -1,9 +1,8 @@
 import { cn } from "@/lib/utils"
-import { IconBaseProps } from "react-icons"
 
 type QuickSearchProps = {
   className?: string
-  icon: React.ReactElement<IconBaseProps>
+  icon: React.ReactElement
   children: React.ReactNode
 }
 
