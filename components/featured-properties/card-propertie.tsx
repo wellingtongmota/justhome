@@ -2,22 +2,39 @@ import { Separator } from "@/components/ui/separator"
 import { TPropertie } from "@/types"
 import { Bath, Bed, MapPin, SquareDashed } from "lucide-react"
 import { TagPropertie } from "./tag-propertie"
+import { cn } from "@/lib/utils"
 
 type CardPropertieProps = {
   propertie: TPropertie
+  className?: string
+  cardInfoClassName?: string
+  valueClassName?: string
 }
 
-export function CardPropertie({ propertie }: CardPropertieProps) {
+export function CardPropertie({
+  propertie,
+  className,
+  cardInfoClassName,
+  valueClassName
+}: CardPropertieProps) {
   const { img, name, tags, address, area, bathrooms, rooms, value } = propertie
   return (
     <div
-      className="animate-fade flex aspect-square w-full max-w-md flex-col justify-center overflow-hidden rounded-md border bg-cover bg-center p-2 opacity-0 hover:cursor-pointer hover:shadow-lg"
+      className={cn([
+        "animate-fade flex aspect-square w-full max-w-md flex-col justify-center overflow-hidden rounded-md border bg-cover bg-center p-2 opacity-0 hover:cursor-pointer hover:shadow-lg",
+        className
+      ])}
       style={{ backgroundImage: `url(${img})` }}
     >
       <div className="flex gap-2">
         {tags?.map((tag) => <TagPropertie key={tag} input={tag} />)}
       </div>
-      <div className="mx-auto mt-auto grid w-full space-y-2 rounded-md bg-white p-3">
+      <div
+        className={cn([
+          "mx-auto mt-auto grid w-full space-y-2 rounded-md p-3",
+          cardInfoClassName
+        ])}
+      >
         <h3 className="font-medium">{name}</h3>
         <div className="flex items-center gap-1">
           <MapPin className="size-4" />
@@ -25,7 +42,7 @@ export function CardPropertie({ propertie }: CardPropertieProps) {
         </div>
 
         <div className="flex flex-wrap items-center justify-between gap-1">
-          <h3 className="text-destructive mr-auto text-lg font-medium">
+          <h3 className={cn(["text-lg font-medium", valueClassName])}>
             {value}
           </h3>
 

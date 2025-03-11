@@ -109,7 +109,12 @@ export function FeaturedProperties() {
 
       <div className="grid w-full justify-items-center gap-4 sm:grid-cols-2 md:gap-8 lg:grid-cols-3">
         {filteredProperties.map((property) => (
-          <CardPropertie key={property.name} propertie={property} />
+          <CardPropertie
+            key={property.name}
+            propertie={property}
+            cardInfoClassName="bg-white"
+            valueClassName="text-destructive"
+          />
         ))}
       </div>
 
