@@ -79,11 +79,9 @@ export function FeaturedProperties() {
 
   return (
     <section className="wrapper mx-auto flex flex-col items-center gap-6 py-8 sm:gap-10 md:py-16">
-      <div className="text-center">
-        <h2 className="text-2xl font-medium sm:text-4xl">
-          Featured Properties
-        </h2>
-        <p className="text-sm sm:text-base">
+      <div className="space-y-1 text-center">
+        <h2 className="wrapper-title">Featured Properties</h2>
+        <p className="wrapper-subtitle">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
       </div>

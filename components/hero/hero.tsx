@@ -18,7 +18,7 @@ export function Hero() {
           <h2 className="text-primary uppercase">Let us guide your home</h2>
         </div>
 
-        <h1 className="lg:6xl text-primary text-4xl tracking-wide md:text-5xl">
+        <h1 className="wrapper-title text-primary tracking-wide">
           Believe in finding it
         </h1>
 

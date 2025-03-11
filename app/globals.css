@@ -126,6 +126,14 @@
   .wrapper {
     @apply w-full max-w-screen-2xl px-4 2xl:px-0;
   }
+
+  .wrapper-title {
+    @apply text-xl font-medium sm:text-3xl xl:text-5xl;
+  }
+
+  .wrapper-subtitle {
+    @apply text-sm sm:text-base xl:text-xl;
+  }
 }
 
 @theme {

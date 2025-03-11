@@ -1,6 +1,7 @@
 import { CitiesProperties } from "@/components/cities-properties"
 import { FeaturedProperties } from "@/components/featured-properties"
 import { Hero } from "@/components/hero/hero"
+import { HowWorks } from "@/components/how-works"
 import { WorkWithUs } from "@/components/work-with-us"
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <WorkWithUs />
       <FeaturedProperties />
       <CitiesProperties />
+      <HowWorks />
     </div>
   )
 }
