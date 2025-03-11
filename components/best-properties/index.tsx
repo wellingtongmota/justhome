@@ -3,7 +3,7 @@
 import { TagPropertie } from "@/components/featured-properties/tag-propertie"
 import { Separator } from "@/components/ui/separator"
 import { TPropertie } from "@/types"
-import { Bath, Bed, MapPin, SquareDashed } from "lucide-react"
+import { Bath, Bed, MapPin, MoveRight, Play, SquareDashed } from "lucide-react"
 import "keen-slider/keen-slider.min.css"
 import { useKeenSlider } from "keen-slider/react.es"
 import { ChevronLeft, ChevronRight } from "lucide-react"
@@ -29,7 +29,6 @@ export function BestProperties() {
   const [sliderRef, instanceRef] = useKeenSlider({
     loop: true,
     slides: { perView: 1, spacing: 0 },
-    drag: false,
     mode: "snap"
   })
 
@@ -44,11 +43,12 @@ export function BestProperties() {
         </div>
 
         <div className="mx-auto grid w-5/6 max-w-screen-lg gap-4 md:w-full md:grid-cols-4 md:grid-rows-2">
+          {/* BOX 1 */}
           <div
-            className="col-span-2 row-span-2 aspect-square overflow-hidden rounded-md bg-cover bg-center"
+            className="aspect-square overflow-hidden rounded-md bg-cover bg-center md:col-span-2 lg:row-span-2"
             style={{ backgroundImage: `url(${propertie.img})` }}
           >
-            <div className="flex h-full w-full flex-col bg-linear-to-t from-black/70 via-black/10 to-black/0 p-4">
+            <div className="flex h-full w-full flex-col bg-linear-to-t from-black/70 via-black/0 to-black/0 p-4">
               <div className="flex gap-2">
                 {propertie.tags?.map((tag) => (
                   <TagPropertie key={tag} input={tag} />
@@ -79,8 +79,13 @@ export function BestProperties() {
               </div>
             </div>
           </div>
-          <div className="relative col-span-2 aspect-square overflow-hidden rounded-md md:aspect-auto">
-            <div ref={sliderRef} className="keen-slider relative h-full w-full">
+
+          {/* BOX 2 */}
+          <div className="relative aspect-video overflow-hidden rounded-md md:col-span-2 md:aspect-auto">
+            <div
+              ref={sliderRef}
+              className="keen-slider h-full w-full overflow-hidden"
+            >
               {slides.map((slide, index) => (
                 <div
                   key={index}
@@ -104,11 +109,29 @@ export function BestProperties() {
               </button>
             </div>
           </div>
-          <div className="aspect-square rounded-md border border-white p-6">
-            03
+
+          {/* BOX 3 */}
+          <div
+            className="flex aspect-video items-center justify-center overflow-hidden rounded-md bg-cover bg-center p-6 md:col-span-1 md:aspect-square"
+            style={{ backgroundImage: `url('/images/bg_video.jpg')` }}
+          >
+            <button className="button border-none bg-black/50 !p-3">
+              <Play className="size-4" />
+            </button>
           </div>
-          <div className="aspect-square rounded-md border border-white p-6">
-            04
+
+          {/* BOX 4 */}
+          <div className="bg-secondary text-foreground flex aspect-video flex-col rounded-md p-6 md:col-span-1 md:aspect-square">
+            <h4 className="text-xl font-medium md:text-3xl">280+</h4>
+            <p className="pt-1">Properties</p>
+            <p className="truncate pt-4 text-sm">
+              Explore our wide variety of properties to fid your dream home
+              today
+            </p>
+
+            <button className="button mt-auto ml-auto border-none bg-white !p-2">
+              <MoveRight className="size-4" />
+            </button>
           </div>
         </div>
       </div>
