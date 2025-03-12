@@ -1,6 +1,7 @@
 import { BestProperties } from "@/components/best-properties"
 import { CitiesProperties } from "@/components/cities-properties"
 import { FeaturedProperties } from "@/components/featured-properties"
+import { Footer } from "@/components/footer"
 import { Hero } from "@/components/hero/hero"
 import { HowWorks } from "@/components/how-works"
 import { MeetTeam } from "@/components/meet-team"
@@ -20,6 +21,7 @@ export default function Home() {
       {/* <BestProperties /> */}
       <MeetTeam />
       <PopularMarkets />
+      <Footer />
     </div>
   )
 }
