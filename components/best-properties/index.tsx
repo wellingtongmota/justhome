@@ -25,6 +25,7 @@ const slides = [
   "/interior/interior_3.jpg"
 ]
 
+// TODO: corrigir responsividade dos boxes
 export function BestProperties() {
   const [sliderRef, instanceRef] = useKeenSlider({
     loop: true,
