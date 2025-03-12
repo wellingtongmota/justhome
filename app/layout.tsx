@@ -22,6 +22,15 @@ export default function RootLayout({
           roboto.className
         ])}
       >
+        <div className="w-full bg-amber-300 p-0.5 text-center text-xs">
+          This design is based on the project by{" "}
+          <a
+            href="https://www.figma.com/community/file/1363146757495909701"
+            target="_blank"
+          >
+            @shawon3
+          </a>
+        </div>
         <Navbar />
         {children}
       </body>

@@ -35,7 +35,7 @@ const links: TLink[] = [
 
 export function Navbar() {
   return (
-    <header className="absolute top-4 z-10 mx-auto flex w-full px-4 xl:px-0">
+    <header className="absolute top-6 z-10 mx-auto flex w-full px-4 xl:px-0">
       <div className="mx-auto flex h-14 w-full max-w-screen-xl items-center rounded-full bg-white px-4">
         <div className="basis-1/3">
           <Link href="/">
