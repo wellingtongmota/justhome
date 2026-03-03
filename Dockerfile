@@ -1,5 +1,5 @@
 # Etapa 1: Construção
-FROM node:20-alpine AS builder
+FROM node:24-alpine AS builder
 
 WORKDIR /app
 
@@ -19,7 +19,7 @@ RUN npm run build
 RUN npm prune --production
 
 # Etapa 2: Execução
-FROM node:20-alpine
+FROM node:24-alpine
 
 WORKDIR /app
 
